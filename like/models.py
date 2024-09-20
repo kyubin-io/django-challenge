@@ -1,11 +1,11 @@
 from django.db import models
 
-class Tweet(models.Model):
+class Like(models.Model):
 
     """Model Definition for Tweet"""
 
-    payload = models.TextField(max_length=180)
     user = models.ForeignKey("users.User", on_delete=models.CASCADE)
+    tweet = models.ForeignKey("tweet.Tweet", on_delete=models.CASCADE)
     created_at = models.DateTimeField()
     updated_at = models.DateTimeField()
 
