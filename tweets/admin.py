@@ -4,9 +4,14 @@ from .models import Tweet, Like
 
 @admin.register(Tweet)
 class TweetAdmin(admin.ModelAdmin):
-    pass
+    list_display = (
+        "__str__",
+    )
+
 
 
 @admin.register(Like)
 class LikeAdmin(admin.ModelAdmin):
-    pass
+    list_display = (
+        "__str__",
+    )
