@@ -1,7 +1,7 @@
+<h1>All Tweets</h1>
+
 <ul>
   {% for tweet in tweets %}
-  <li>
-    <h1>{{tweet}}</h1>
-  </li>
-  {% endfor %}
+  <li>{{tweet.payload}} - {{tweet.user.username}}</li>
+  {% endfor%}
 </ul>

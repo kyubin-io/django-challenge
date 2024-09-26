@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views
+from .views import see_all_tweets
 
 urlpatterns = [
-    path("", views.see_all_tweets)
+  path('', see_all_tweets)
 ]
