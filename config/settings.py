@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 CUSTOM_APPS = [
-    'rest_framework',
     'common.apps.CommonConfig',
     'users.apps.UsersConfig',
     'tweets.apps.TweetsConfig',
@@ -44,6 +43,7 @@ SYSTEM_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 ]
 
 INSTALLED_APPS = CUSTOM_APPS + SYSTEM_APPS

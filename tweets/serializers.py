@@ -1,4 +1,4 @@
-sefrom rest_framework import serializers
+from rest_framework import serializers
 
 
 class TweetSerializer(serializers.Serializer):
