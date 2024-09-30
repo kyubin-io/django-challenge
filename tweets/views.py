@@ -1,8 +1,12 @@
-from rest_framework.viewsets import ModelViewSet
+from rest_framework.response import Response
+from rest_framework.views import APIView
 from .serializers import TweetSerializer
 from .models import Tweet
 
 
-class AllTweet(ModelViewSet):
-    serializer_class = TweetSerializer
-    queryset = Tweet.objects.all()
+class Tweets(APIView):
+
+  def get(self, request):
+    tweets = Tweet.objects.all()
+    serializer = TweetSerializer(tweets, many=True)
+    return Response(serializer.data)
