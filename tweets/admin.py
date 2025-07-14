@@ -4,9 +4,9 @@ from .models import Tweet, Like
 
 @admin.register(Tweet)
 class TweetAdmin(admin.ModelAdmin):
-    pass
+    list_display = ("payload", "user", "like_count", "created_at", "updated_at", )
 
 
 @admin.register(Like)
 class LikeAdmin(admin.ModelAdmin):
-    pass
+    list_display = ("user", "tweet",  )
