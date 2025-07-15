@@ -31,7 +31,7 @@ class TweetAdmin(admin.ModelAdmin):
 
     search_fields = ("payload", "user__name", )
 
-    list_filter = ("created_at", )
+    list_filter = (elonMusk, "created_at", )
 
 
 @admin.register(Like)
